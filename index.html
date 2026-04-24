@@ -12,6 +12,9 @@
     --orange: #E87C2A;
     --orange-dark: #C4621A;
     --orange-light: #FFF0E4;
+    --green: #3EAD72;
+    --green-dark: #2D8A58;
+    --green-light: #E8F5EE;
     --dark: #141414;
     --dark-2: #1E1E1E;
     --dark-3: #2A2A2A;
@@ -19,7 +22,7 @@
     --cement-light: #B8B0A8;
     --cream: #F5F0EA;
     --white: #FFFFFF;
-    --success: #2D9B5E;
+    --success: #3EAD72;
     --font-head: 'Bebas Neue', sans-serif;
     --font-body: 'DM Sans', sans-serif;
   }
@@ -147,9 +150,9 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(232, 124, 42, 0.15);
-    border: 1px solid rgba(232, 124, 42, 0.3);
-    color: var(--orange);
+    background: rgba(62, 173, 114, 0.15);
+    border: 1px solid rgba(62, 173, 114, 0.3);
+    color: var(--green);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -162,7 +165,7 @@
     content: '';
     width: 6px;
     height: 6px;
-    background: var(--orange);
+    background: var(--green);
     border-radius: 50%;
     animation: pulse 2s infinite;
   }
@@ -231,8 +234,8 @@
     transition: all 0.2s;
   }
   .btn-ghost:hover {
-    border-color: rgba(255,255,255,0.3);
-    color: var(--white);
+    border-color: var(--green);
+    color: var(--green);
   }
   .hero-stats {
     display: flex;
@@ -249,6 +252,7 @@
     letter-spacing: 0.02em;
     line-height: 1;
   }
+  .hero-stats > div:last-child .hero-stat-num { color: var(--green); }
   .hero-stat-label {
     font-size: 12px;
     color: var(--cement);
@@ -271,7 +275,8 @@
     height: 100%;
     background:
       radial-gradient(circle at 60% 40%, rgba(232, 124, 42, 0.12) 0%, transparent 60%),
-      radial-gradient(circle at 30% 80%, rgba(232, 124, 42, 0.06) 0%, transparent 50%);
+      radial-gradient(circle at 30% 80%, rgba(232, 124, 42, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 10% 25%, rgba(62, 173, 114, 0.09) 0%, transparent 45%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -339,6 +344,9 @@
     color: var(--orange);
     margin-bottom: 0.75rem;
   }
+  #como-funciona .section-label,
+  #entrega .section-label,
+  #depoimentos .section-label { color: var(--green); }
   .section-title {
     font-family: var(--font-head);
     font-size: clamp(36px, 5vw, 56px);
@@ -400,6 +408,7 @@
     border-radius: 100px;
     letter-spacing: 0.04em;
   }
+  .product-badge-green { background: var(--green); }
   .product-body {
     padding: 1.25rem 1.5rem 1.5rem;
   }
@@ -499,6 +508,7 @@
     right: 1.5rem;
     letter-spacing: 0.02em;
   }
+  .step:nth-child(even) .step-number { color: rgba(62, 173, 114, 0.18); }
   .step-icon {
     font-size: 32px;
     margin-bottom: 1.25rem;
@@ -536,11 +546,14 @@
     background: var(--white);
     padding: 1.25rem 1.5rem;
     border-radius: 12px;
+    border-left: 3px solid transparent;
     transition: box-shadow 0.2s;
   }
   .perk:hover {
     box-shadow: 0 8px 24px rgba(0,0,0,0.06);
   }
+  .perk:nth-child(2), .perk:nth-child(4) { border-left-color: var(--orange); }
+  .perk:nth-child(3), .perk:nth-child(5) { border-left-color: var(--green); }
   .perk-icon {
     font-size: 28px;
     flex-shrink: 0;
@@ -572,7 +585,9 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 80% 20%, rgba(232, 124, 42, 0.2) 0%, transparent 55%);
+    background:
+      radial-gradient(circle at 80% 20%, rgba(232, 124, 42, 0.2) 0%, transparent 55%),
+      radial-gradient(circle at 15% 80%, rgba(62, 173, 114, 0.14) 0%, transparent 45%);
   }
   .delivery-visual h3 {
     font-family: var(--font-head);
@@ -651,6 +666,7 @@
     border-color: var(--orange);
     transform: translateY(-4px);
   }
+  .cat-card:nth-child(even):hover { border-color: var(--green); }
   .cat-card:hover .cat-name { color: var(--white); }
   .cat-card:hover .cat-count { color: var(--cement-light); }
   .cat-icon { font-size: 44px; }
@@ -690,6 +706,7 @@
     line-height: 1;
     opacity: 0.4;
   }
+  .testimonial:nth-child(2)::before { color: var(--green); }
   .stars {
     display: flex;
     gap: 3px;
@@ -846,6 +863,7 @@
     font-weight: 700;
     flex-shrink: 0;
   }
+  .info-card:nth-child(even) li::before { color: var(--green); }
 
   /* ── FOOTER ───────────────────────────────────── */
   footer {
@@ -1088,13 +1106,13 @@
         </div>
       </div>
       <div class="hero-card">
-        <div class="hero-card-icon" style="background: rgba(100,180,100,0.15);">🏗️</div>
+        <div class="hero-card-icon" style="background: rgba(62,173,114,0.15);">🏗️</div>
         <div class="hero-card-info">
           <strong>Argamassa AC-I</strong>
           <span>20kg · Assentamento</span>
         </div>
         <div class="hero-card-price">
-          <strong>R$ 34</strong>
+          <strong style="color: var(--green);">R$ 34</strong>
           <span>em estoque</span>
         </div>
       </div>
@@ -1275,7 +1293,7 @@
         </div>
         <p class="testimonial-text">Fiz o pedido de manhã e o material chegou antes do almoço. Tinta de qualidade, embalagem perfeita. Recomendo demais!</p>
         <div class="testimonial-author">
-          <div class="author-avatar" style="background: #E87C2A;">RC</div>
+          <div class="author-avatar" style="background: var(--orange);">RC</div>
           <div>
             <div class="author-name">Ricardo Costa</div>
             <div class="author-role">Pedreiro Autônomo</div>
@@ -1292,7 +1310,7 @@
         </div>
         <p class="testimonial-text">Estava reformando meu apartamento e precisei de argamassa com urgência. Em 3 horas o material estava aqui. Serviço excelente!</p>
         <div class="testimonial-author">
-          <div class="author-avatar" style="background: #2D9B5E;">MS</div>
+          <div class="author-avatar" style="background: var(--green);">MS</div>
           <div>
             <div class="author-name">Marina Santos</div>
             <div class="author-role">Proprietária</div>
@@ -1309,7 +1327,7 @@
         </div>
         <p class="testimonial-text">Compro sempre que preciso de material. Preço justo, produto de qualidade e atendimento muito atencioso. Parceiro de confiança!</p>
         <div class="testimonial-author">
-          <div class="author-avatar" style="background: #5B6CF9;">JO</div>
+          <div class="author-avatar" style="background: var(--orange);">JO</div>
           <div>
             <div class="author-name">João Oliveira</div>
             <div class="author-role">Engenheiro Civil</div>
@@ -1486,7 +1504,7 @@ const products = [
   },
   {
     id: 3, category: 'Massa Corrida', emoji: '🪣',
-    name: 'Massa Corrida PVA 25kg', badge: 'Promoção',
+    name: 'Massa Corrida PVA 25kg', badge: 'Promoção', badgeGreen: true,
     desc: 'Preparo de paredes para pintura. Fácil aplicação, lixamento suave, acabamento impecável.',
     oldPrice: 'R$ 89', price: 'R$ 72', unit: 'por balde 25kg',
     bg: '#FFF8E1'
@@ -1507,7 +1525,7 @@ const products = [
   },
   {
     id: 6, category: 'Conexões', emoji: '🔧',
-    name: 'Kit Conexões PVC 3/4" (20 peças)', badge: 'Kit Completo',
+    name: 'Kit Conexões PVC 3/4" (20 peças)', badge: 'Kit Completo', badgeGreen: true,
     desc: 'Joelhos, tês, uniões e adaptadores em PVC. Inclui vedação. Para instalações hidráulicas.',
     oldPrice: null, price: 'R$ 67', unit: 'por kit',
     bg: '#E0F7FA'
@@ -1536,7 +1554,7 @@ function renderProducts() {
     <div class="product-card">
       <div class="product-img" style="background:${p.bg}">
         <span style="font-size:72px">${p.emoji}</span>
-        ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
+        ${p.badge ? `<span class="product-badge${p.badgeGreen ? ' product-badge-green' : ''}">${p.badge}</span>` : ''}
       </div>
       <div class="product-body">
         <div class="product-category">${p.category}</div>
