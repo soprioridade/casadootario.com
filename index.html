@@ -12,9 +12,6 @@
     --orange: #E87C2A;
     --orange-dark: #C4621A;
     --orange-light: #FFF0E4;
-    --green: #3EAD72;
-    --green-dark: #2D8A58;
-    --green-light: #E8F5EE;
     --dark: #141414;
     --dark-2: #1E1E1E;
     --dark-3: #2A2A2A;
@@ -22,7 +19,7 @@
     --cement-light: #B8B0A8;
     --cream: #F5F0EA;
     --white: #FFFFFF;
-    --success: #3EAD72;
+    --success: #2D9B5E;
     --font-head: 'Bebas Neue', sans-serif;
     --font-body: 'DM Sans', sans-serif;
   }
@@ -39,14 +36,14 @@
 
   /* ── TOPBAR ─────────────────────────────────── */
   .topbar {
-    background: var(--green-dark);
-    color: rgba(255,255,255,0.85);
+    background: var(--dark);
+    color: var(--cement-light);
     font-size: 13px;
     padding: 8px 0;
     text-align: center;
     letter-spacing: 0.02em;
   }
-  .topbar span { color: var(--orange); font-weight: 700; }
+  .topbar span { color: var(--orange); font-weight: 600; }
 
   /* ── NAV ─────────────────────────────────────── */
   nav {
@@ -55,8 +52,6 @@
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 20px rgba(0,0,0,0.4);
-    border-bottom: 2px solid;
-    border-image: linear-gradient(90deg, var(--orange) 0%, var(--green) 100%) 1;
   }
   .nav-inner {
     max-width: 1200px;
@@ -80,7 +75,7 @@
   .logo-icon {
     width: 34px;
     height: 34px;
-    background: linear-gradient(135deg, var(--orange) 0%, var(--green-dark) 100%);
+    background: var(--orange);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,9 +147,9 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(62, 173, 114, 0.15);
-    border: 1px solid rgba(62, 173, 114, 0.3);
-    color: var(--green);
+    background: rgba(232, 124, 42, 0.15);
+    border: 1px solid rgba(232, 124, 42, 0.3);
+    color: var(--orange);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -167,7 +162,7 @@
     content: '';
     width: 6px;
     height: 6px;
-    background: var(--green);
+    background: var(--orange);
     border-radius: 50%;
     animation: pulse 2s infinite;
   }
@@ -184,10 +179,6 @@
     margin-bottom: 1.5rem;
   }
   .hero h1 em {
-    background: linear-gradient(100deg, var(--orange) 20%, var(--green) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
     color: var(--orange);
     font-style: normal;
     display: block;
@@ -240,16 +231,15 @@
     transition: all 0.2s;
   }
   .btn-ghost:hover {
-    border-color: var(--green);
-    color: var(--green);
+    border-color: rgba(255,255,255,0.3);
+    color: var(--white);
   }
   .hero-stats {
     display: flex;
     gap: 2.5rem;
     margin-top: 3.5rem;
     padding-top: 2.5rem;
-    border-top: 1px solid;
-    border-image: linear-gradient(90deg, rgba(232,124,42,0.5) 0%, rgba(62,173,114,0.5) 100%) 1;
+    border-top: 1px solid rgba(255,255,255,0.08);
   }
   .hero-stat-num {
     font-family: var(--font-head);
@@ -259,7 +249,6 @@
     letter-spacing: 0.02em;
     line-height: 1;
   }
-  .hero-stats > div:last-child .hero-stat-num { color: var(--green); }
   .hero-stat-label {
     font-size: 12px;
     color: var(--cement);
@@ -281,9 +270,8 @@
     width: 100%;
     height: 100%;
     background:
-      radial-gradient(circle at 65% 35%, rgba(232, 124, 42, 0.14) 0%, transparent 55%),
-      radial-gradient(circle at 25% 75%, rgba(62, 173, 114, 0.18) 0%, transparent 50%),
-      radial-gradient(circle at 10% 20%, rgba(62, 173, 114, 0.10) 0%, transparent 40%);
+      radial-gradient(circle at 60% 40%, rgba(232, 124, 42, 0.12) 0%, transparent 60%),
+      radial-gradient(circle at 30% 80%, rgba(232, 124, 42, 0.06) 0%, transparent 50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -351,9 +339,6 @@
     color: var(--orange);
     margin-bottom: 0.75rem;
   }
-  #como-funciona .section-label,
-  #entrega .section-label,
-  #depoimentos .section-label { color: var(--green); }
   .section-title {
     font-family: var(--font-head);
     font-size: clamp(36px, 5vw, 56px);
@@ -378,7 +363,6 @@
 
   /* ── PRODUCTS ─────────────────────────────────── */
   #produtos { background: var(--white); }
-  .price-green { color: var(--green); }
   .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -416,7 +400,6 @@
     border-radius: 100px;
     letter-spacing: 0.04em;
   }
-  .product-badge-green { background: var(--green); }
   .product-body {
     padding: 1.25rem 1.5rem 1.5rem;
   }
@@ -479,7 +462,7 @@
     font-family: var(--font-body);
   }
   .btn-add:hover {
-    background: var(--green);
+    background: var(--orange);
     transform: scale(1.04);
   }
 
@@ -504,11 +487,8 @@
     padding: 2.5rem 2rem;
     position: relative;
     transition: background 0.2s;
-    border-top: 3px solid rgba(232, 124, 42, 0.4);
   }
-  .step:nth-child(even) { border-top-color: rgba(62, 173, 114, 0.55); background: #1b2720; }
   .step:hover { background: var(--dark-3); }
-  .step:nth-child(even):hover { background: #222f28; }
   .step-number {
     font-family: var(--font-head);
     font-size: 72px;
@@ -519,7 +499,6 @@
     right: 1.5rem;
     letter-spacing: 0.02em;
   }
-  .step:nth-child(even) .step-number { color: rgba(62, 173, 114, 0.2); }
   .step-icon {
     font-size: 32px;
     margin-bottom: 1.25rem;
@@ -557,14 +536,11 @@
     background: var(--white);
     padding: 1.25rem 1.5rem;
     border-radius: 12px;
-    border-left: 3px solid transparent;
     transition: box-shadow 0.2s;
   }
   .perk:hover {
     box-shadow: 0 8px 24px rgba(0,0,0,0.06);
   }
-  .perk:nth-child(2), .perk:nth-child(4) { border-left-color: var(--orange); }
-  .perk:nth-child(3), .perk:nth-child(5) { border-left-color: var(--green); }
   .perk-icon {
     font-size: 28px;
     flex-shrink: 0;
@@ -596,9 +572,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background:
-      radial-gradient(circle at 80% 20%, rgba(232, 124, 42, 0.2) 0%, transparent 55%),
-      radial-gradient(circle at 15% 80%, rgba(62, 173, 114, 0.14) 0%, transparent 45%);
+    background: radial-gradient(circle at 80% 20%, rgba(232, 124, 42, 0.2) 0%, transparent 55%);
   }
   .delivery-visual h3 {
     font-family: var(--font-head);
@@ -611,7 +585,7 @@
     letter-spacing: 0.02em;
   }
   .delivery-visual h3 em {
-    color: var(--green);
+    color: var(--orange);
     font-style: normal;
     display: block;
   }
@@ -652,14 +626,14 @@
   }
 
   /* ── CATEGORIAS ────────────────────────────────── */
-  #categorias { background: var(--green-light); }
+  #categorias { background: var(--white); }
   .cats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.25rem;
   }
   .cat-card {
-    background: var(--white);
+    background: var(--cream);
     border-radius: 16px;
     padding: 2rem 1.5rem;
     text-align: center;
@@ -671,17 +645,12 @@
     align-items: center;
     gap: 0.75rem;
     border: 2px solid transparent;
-    border-top: 3px solid var(--orange);
   }
-  .cat-card:nth-child(even) { border-top-color: var(--green); }
   .cat-card:hover {
     background: var(--dark);
     border-color: var(--orange);
-    border-top-color: var(--orange);
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
   }
-  .cat-card:nth-child(even):hover { border-color: var(--green); border-top-color: var(--green); }
   .cat-card:hover .cat-name { color: var(--white); }
   .cat-card:hover .cat-count { color: var(--cement-light); }
   .cat-icon { font-size: 44px; }
@@ -709,10 +678,7 @@
     border-radius: 16px;
     padding: 1.75rem;
     position: relative;
-    border-top: 3px solid var(--orange);
   }
-  .testimonial:nth-child(2) { border-top-color: var(--green); }
-  .testimonial:nth-child(3) { border-top-color: var(--orange); }
   .testimonial::before {
     content: '"';
     font-family: var(--font-head);
@@ -722,9 +688,8 @@
     top: 0.5rem;
     right: 1.5rem;
     line-height: 1;
-    opacity: 0.35;
+    opacity: 0.4;
   }
-  .testimonial:nth-child(2)::before { color: var(--green); }
   .stars {
     display: flex;
     gap: 3px;
@@ -811,8 +776,7 @@
     outline: none;
   }
   .form-input:focus, .form-select:focus, .form-textarea:focus {
-    border-color: var(--green);
-    box-shadow: 0 0 0 3px rgba(62, 173, 114, 0.12);
+    border-color: var(--orange);
   }
   .form-select option { background: var(--dark-2); }
   .form-textarea { resize: vertical; min-height: 120px; }
@@ -882,15 +846,12 @@
     font-weight: 700;
     flex-shrink: 0;
   }
-  .info-card:nth-child(even) li::before { color: var(--green); }
 
   /* ── FOOTER ───────────────────────────────────── */
   footer {
     background: #0C0C0C;
     color: var(--cement);
     padding: 4rem 2rem 2rem;
-    border-top: 3px solid;
-    border-image: linear-gradient(90deg, var(--green) 0%, var(--orange) 100%) 1;
   }
   .footer-inner {
     max-width: 1200px;
@@ -932,7 +893,6 @@
     transition: background 0.2s;
   }
   .social-link:hover { background: var(--orange); }
-  .social-link:nth-child(2):hover { background: var(--green-dark); }
   .footer-col h4 {
     font-size: 13px;
     font-weight: 700;
@@ -954,7 +914,6 @@
     transition: color 0.2s;
   }
   .footer-links a:hover { color: var(--orange); }
-  .footer-col:last-child .footer-links a:hover { color: var(--green); }
   .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -1059,7 +1018,7 @@
 
 <!-- TOPBAR -->
 <div class="topbar">
-  🚚 Entregamos em toda a região &nbsp;|&nbsp; Pedidos pelo <span>WhatsApp: (82) 9 9968-90257</span> &nbsp;|&nbsp; Seg–Sex 6h–16:30 · Sáb 6h–13h · Dom 6h–11:30
+  🚚 Entregamos em toda a região &nbsp;|&nbsp; Pedidos pelo <span>WhatsApp: (82) 9 9689-0257</span> &nbsp;|&nbsp; Seg–Sex 6h–16:30 · Sáb 6h–13h · Dom 6h–11:30
 </div>
 
 <!-- NAV -->
@@ -1096,7 +1055,7 @@
       <a href="#produtos" class="btn-primary">
         🛒 Ver Produtos
       </a>
-      <a href="https://wa.me/55829996890257" class="btn-ghost" target="_blank">
+      <a href="https://wa.me/5582996890257" class="btn-ghost" target="_blank">
         💬 Falar no WhatsApp
       </a>
     </div>
@@ -1135,7 +1094,7 @@
           <span>20kg · Assentamento</span>
         </div>
         <div class="hero-card-price">
-          <strong style="color: var(--green);">R$ 34</strong>
+          <strong>R$ 34</strong>
           <span>em estoque</span>
         </div>
       </div>
@@ -1286,7 +1245,7 @@
       <div class="delivery-visual">
         <h3>PEDIDO RÁPIDO<br><em>VIA WHATSAPP</em></h3>
         <p>Prefere pedir direto? Fale com a gente pelo WhatsApp e receba um atendimento personalizado. Seg–Sex das 6h às 16h30, Sáb das 6h às 13h, Dom das 6h às 11h30.</p>
-        <a href="https://wa.me/55829996890257?text=Olá!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido." class="whatsapp-btn" target="_blank">
+        <a href="https://wa.me/5582996890257?text=Olá!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido." class="whatsapp-btn" target="_blank">
           <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Chamar no WhatsApp
         </a>
@@ -1333,7 +1292,7 @@
         </div>
         <p class="testimonial-text">Estava reformando meu apartamento e precisei de argamassa com urgência. Em 3 horas o material estava aqui. Serviço excelente!</p>
         <div class="testimonial-author">
-          <div class="author-avatar" style="background: var(--green);">MS</div>
+          <div class="author-avatar" style="background: var(--orange-dark);">MS</div>
           <div>
             <div class="author-name">Marina Santos</div>
             <div class="author-role">Proprietária</div>
@@ -1443,7 +1402,7 @@
         </div>
         <div class="info-card">
           <h3>📞 Contato direto</h3>
-          <p>WhatsApp: (82) 9 9968-90257<br>Email: contato@soartenconstrucoes.com.br</p>
+          <p>WhatsApp: (82) 9 9689-0257<br>Email: contato@soartenconstrucoes.com.br</p>
         </div>
       </div>
     </div>
@@ -1465,7 +1424,7 @@
         <p class="footer-desc">Material de construção de qualidade com entrega rápida na sua porta. Atendemos obras, reformas e construções em geral.</p>
         <div class="social-links">
           <a href="#" class="social-link" title="Instagram">📷</a>
-          <a href="https://wa.me/55829996890257" class="social-link" title="WhatsApp">💬</a>
+          <a href="https://wa.me/5582996890257" class="social-link" title="WhatsApp">💬</a>
           <a href="#" class="social-link" title="Facebook">👥</a>
         </div>
       </div>
@@ -1486,7 +1445,7 @@
           <li><a href="#entrega">Entrega</a></li>
           <li><a href="#depoimentos">Avaliações</a></li>
           <li><a href="#pedido">Fazer Pedido</a></li>
-          <li><a href="https://wa.me/55829996890257">Contato</a></li>
+          <li><a href="https://wa.me/5582996890257">Contato</a></li>
         </ul>
       </div>
     </div>
@@ -1577,7 +1536,7 @@ function renderProducts() {
     <div class="product-card">
       <div class="product-img" style="background:${p.bg}">
         <span style="font-size:72px">${p.emoji}</span>
-        ${p.badge ? `<span class="product-badge${p.badgeGreen ? ' product-badge-green' : ''}">${p.badge}</span>` : ''}
+        ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
       </div>
       <div class="product-body">
         <div class="product-category">${p.category}</div>
@@ -1586,7 +1545,7 @@ function renderProducts() {
         <div class="product-footer">
           <div class="product-price">
             ${p.oldPrice ? `<span class="price-from">${p.oldPrice}</span>` : ''}
-            <span class="price-main${p.badgeGreen ? ' price-green' : ''}">${p.price}</span>
+            <span class="price-main">${p.price}</span>
             <span class="price-unit">${p.unit}</span>
           </div>
           <button class="btn-add" onclick="addToCart(${p.id})">
@@ -1620,7 +1579,7 @@ document.getElementById('order-form').addEventListener('submit', function(e) {
       ? cart.map(p => p.name).join(', ')
       : 'produto do formulário';
     const waMsg = encodeURIComponent(`Olá! Acabei de enviar um pedido pelo site. Produtos selecionados: ${cartList}`);
-    window.open(`https://wa.me/55829996890257?text=${waMsg}`, '_blank');
+    window.open(`https://wa.me/5582996890257?text=${waMsg}`, '_blank');
   }, 1000);
 });
 
